@@ -1,0 +1,234 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Tahoma', 'Arial', sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+}
+
+/* ===== صفحة تسجيل الدخول ===== */
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.login-box {
+    background: white;
+    padding: 40px;
+    border-radius: 20px;
+    text-align: center;
+    width: 350px;
+}
+
+.login-box h2 {
+    color: #667eea;
+    margin-bottom: 10px;
+}
+
+.login-box h3 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.login-hint {
+    margin-top: 15px;
+    color: #888;
+    font-size: 12px;
+}
+
+.btn-login {
+    background: #667eea;
+    color: white;
+    border: none;
+    padding: 12px;
+    width: 100%;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.btn-login:hover {
+    background: #5a67d8;
+}
+
+/* ===== شريط التنقل ===== */
+.navbar {
+    background: #2d3748;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.logo {
+    color: white;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.nav-links li a {
+    color: white;
+    text-decoration: none;
+    padding: 8px 15px;
+    border-radius: 8px;
+}
+
+.nav-links li a:hover {
+    background: #4a5568;
+}
+
+#logoutBtn {
+    background: #e53e3e;
+}
+
+#logoutBtn:hover {
+    background: #c53030;
+}
+
+/* ===== الحاوية ===== */
+.container {
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 20px;
+}
+
+.section {
+    padding: 20px;
+}
+
+.section h2 {
+    color: #2d3748;
+    margin-bottom: 20px;
+}
+
+/* ===== الإحصائيات ===== */
+.stats {
+    margin: 20px 0;
+}
+
+.stat-card {
+    background: #667eea;
+    color: white;
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+    font-size: 18px;
+}
+
+.stat-card span {
+    font-size: 32px;
+    display: block;
+    margin-top: 10px;
+}
+
+/* ===== النموذج ===== */
+.input-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #4a5568;
+}
+
+.input-group input {
+    padding: 10px;
+    border: 1px solid #cbd5e0;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+.btn-submit {
+    background: #38a169;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.btn-submit:hover {
+    background: #2f855a;
+}
+
+/* ===== قائمة المهام ===== */
+.task-item {
+    background: #f7fafc;
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.task-text {
+    font-size: 16px;
+    color: #2d3748;
+}
+
+.btn-delete {
+    background: #e53e3e;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.btn-delete:hover {
+    background: #c53030;
+}
+
+.empty-message {
+    text-align: center;
+    color: #718096;
+    padding: 20px;
+}
+
+/* ===== رسالة منبثقة ===== */
+.alert-message {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #38a169;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 8px;
+    z-index: 1000;
+}
+
+/* ===== استجابة للشاشات الصغيرة ===== */
+@media (max-width: 600px) {
+    .navbar {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .task-item {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+}

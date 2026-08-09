@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>قائمة مهامي</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="navbar">
+    <div class="logo">📝 قائمة مهامي</div>
+    <ul class="nav-links">
+        <li><a href="#" onclick="showSection('home')">الرئيسية</a></li>
+        <li><a href="#" onclick="showSection('add')">➕ إضافة مهمة</a></li>
+        <li><a href="#" onclick="showSection('list')">📋 قائمة المهام</a></li>
+        <li><a href="#" onclick="showSection('about')">ℹ️ حول</a></li>
+        <li><a href="index.html" id="logoutBtn">🚪 خروج</a></li>
+    </ul>
+</nav>
+
+<div class="container">
+    
+    <!-- الصفحة الرئيسية -->
+    <div id="homeSection" class="section">
+        <h2>🏠 مرحباً بك</h2>
+        <div class="stats">
+            <div class="stat-card">
+                عدد المهام: <span id="totalTasks">0</span>
+            </div>
+        </div>
+        <p>هذا تطبيق بسيط لإدارة مهامك اليومية.</p>
+        <p>يمكنك إضافة مهمة جديدة، عرض جميع المهام، وحذف أي مهمة.</p>
+    </div>
+
+    <!-- إضافة مهمة -->
+    <div id="addSection" class="section" style="display:none;">
+        <h2>➕ إضافة مهمة جديدة</h2>
+        <form id="taskForm">
+            <div class="input-group">
+                <label>عنوان المهمة</label>
+                <input type="text" id="taskTitle" placeholder="مثال: شراء خبز" required>
+            </div>
+            <button type="submit" class="btn-submit">💾 حفظ المهمة</button>
+        </form>
+    </div>
+
+    <!-- عرض المهام -->
+    <div id="listSection" class="section" style="display:none;">
+        <h2>📋 قائمة المهام</h2>
+        <div id="tasksList"></div>
+    </div>
+
+    <!-- حول -->
+    <div id="aboutSection" class="section" style="display:none;">
+        <h2>ℹ️ حول التطبيق</h2>
+        <p>تطبيق بسيط لإدارة المهام</p>
+        <p>تم إنشاؤه باستخدام:</p>
+        <ul>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+        </ul>
+        <p>يتم حفظ البيانات في متصفحك</p>
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
